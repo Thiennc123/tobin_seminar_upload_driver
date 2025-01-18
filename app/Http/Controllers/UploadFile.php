@@ -39,11 +39,22 @@ class UploadFile extends Controller
         return redirect()->route('get-list-file');
     }
 
-    public function unsafeQuery(Request $request)
-    {
-        $unsafeInput = $request->input('search');
-        $results = DB::select("SELECT * FROM users WHERE name = '$unsafeInput'");
-        
-        return response()->json($results);
-    }
+    
+    
+        function authenticate() {
+            $user = $_POST['user'];
+            $pass = $_POST['pass'];
+            $authenticated = false;
+    
+            $query = "SELECT * FROM users WHERE user = '" . $user . "' AND pass = '" . $pass . "'";
+    
+            $stmt = $this->conn->query($query); // Noncompliant
+    
+            if ($stmt->num_rows == 1) {
+              $authenticated = true;
+            }
+    
+            return $authenticated;
+        }
+    
 }
