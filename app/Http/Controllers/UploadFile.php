@@ -45,7 +45,7 @@ class UploadFile extends Controller
         $results = DB::select("SELECT * FROM users WHERE name = '$unsafeInput'");
         return response()->json($results);
 
-        $userInput = $_GET['username']; 
-        $users = DB::select("SELECT * FROM users WHERE username = '$userInput'");
+        // $userInput = $_GET['username']; 
+        // $users = DB::select("SELECT * FROM users WHERE username = '$userInput'");
     }
 }
