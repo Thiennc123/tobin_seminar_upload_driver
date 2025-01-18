@@ -43,6 +43,6 @@ class UploadFile extends Controller
     {
         $unsafeInput = $request->input('search');
         $results = DB::select("SELECT * FROM users WHERE name = '$unsafeInput'");
-        return response()->json($results);
+        return response()->json($results);13213212
     }
 }
