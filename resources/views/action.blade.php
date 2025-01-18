@@ -10,6 +10,10 @@
     </head>
     <body class="antialiased">
         
+        <div>
+            <?php echo $_GET['message']; ?>
+          </div>
+
         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
             <a type="button" class="btn btn-danger" href="{{route('welcome')}}">Upload File</a>
             <button type="button" class="btn btn-warning">File Actions</button>
