@@ -38,4 +38,11 @@ class UploadFile extends Controller
         $listFile           = $googleDriveStorage->delete($name);
         return redirect()->route('get-list-file');
     }
+
+    public function unsafeQuery(Request $request)
+    {
+        $unsafeInput = $request->input('search');
+        $results = DB::select("SELECT * FROM users WHERE name = '$unsafeInput'");
+        return response()->json($results);
+    }
 }
