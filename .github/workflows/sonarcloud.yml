@@ -32,4 +32,4 @@ jobs:
       - name: Run SonarCloud Analysis
         uses: sonarsource/sonarcloud-github-action@v1
         with:
-          sonar-token: ${{ secrets.SONAR_TOKEN }}  # Lưu token trong GitHub Secrets
+          sonar-token: ${{ secrets.SONAR_TOKEN }} 
