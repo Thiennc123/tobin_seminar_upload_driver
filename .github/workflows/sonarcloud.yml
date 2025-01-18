@@ -3,10 +3,10 @@ name: SonarCloud Analysis
 on:
   push:
     branches:
-      - main  # Hoặc nhánh mà bạn muốn kiểm tra (ví dụ: 'develop')
+      - develop  # Hoặc nhánh mà bạn muốn kiểm tra (ví dụ: 'develop')
   pull_request:
     branches:
-      - main  # Hoặc nhánh bạn muốn kiểm tra (ví dụ: 'develop')
+      - develop  # Hoặc nhánh bạn muốn kiểm tra (ví dụ: 'develop')
 
 jobs:
   sonarcloud:
