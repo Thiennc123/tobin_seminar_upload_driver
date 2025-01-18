@@ -41,7 +41,7 @@ class UploadFile extends Controller
 
     
     
-        function authenticate() {
+        public function authenticate() {
             $user = $_POST['user'];
             $pass = $_POST['pass'];
             $authenticated = false;
