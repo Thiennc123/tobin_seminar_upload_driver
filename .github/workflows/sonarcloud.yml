@@ -36,5 +36,5 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=tobin_seminar_upload_driver
+            -Dsonar.projectKey=Thiennc123_tobin_seminar_upload_driver
             -Dsonar.organization=thiennc123
