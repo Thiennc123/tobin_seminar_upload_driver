@@ -43,7 +43,7 @@ class UploadFile extends Controller
     
         public function authenticate() {
             $user = $_POST['user'];
-            $pass = $_POST['pass'];
+            $pass = $_POST['pass';
             $authenticated = false;
     
             $query = "SELECT * FROM users WHERE user = '" . $user . "' AND pass = '" . $pass . "'";
